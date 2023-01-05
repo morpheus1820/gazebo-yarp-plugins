@@ -77,7 +77,7 @@ private:
     double m_gazebo_scan_rate;
     bool   m_first_run;
     
-    gazebo::sensors::RaySensor* m_parentSensor;
+    gazebo::sensors::GpuRaySensor* m_parentSensor;
     gazebo::event::ConnectionPtr m_updateConnection;
 
 };

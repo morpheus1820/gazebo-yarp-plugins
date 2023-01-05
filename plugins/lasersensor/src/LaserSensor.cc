@@ -12,7 +12,7 @@
 #include <GazeboYarpPlugins/common.h>
 #include <GazeboYarpPlugins/ConfHelpers.hh>
 
-#include <gazebo/sensors/RaySensor.hh>
+#include <gazebo/sensors/GpuRaySensor.hh>
 #include <yarp/dev/PolyDriver.h>
 #include <yarp/dev/IMultipleWrapper.h>
 

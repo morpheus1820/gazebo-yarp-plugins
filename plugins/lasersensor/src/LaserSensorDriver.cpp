@@ -68,7 +68,7 @@ bool GazeboYarpLaserSensorDriver::open(yarp::os::Searchable& config)
     //Get gazebo pointers
     std::string sensorScopedName(config.find(YarpLaserSensorScopedName.c_str()).asString().c_str());
 
-    m_parentSensor = dynamic_cast<gazebo::sensors::RaySensor*>(GazeboYarpPlugins::Handler::getHandler()->getSensor(sensorScopedName));
+    m_parentSensor = dynamic_cast<gazebo::sensors::GpuRaySensor*>(GazeboYarpPlugins::Handler::getHandler()->getSensor(sensorScopedName));
     m_first_run = true;
     
     if (!m_parentSensor)
