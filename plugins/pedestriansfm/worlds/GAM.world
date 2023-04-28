@@ -234,21 +234,21 @@
 
     <actor name="actor3">
       <skin>
-        <filename>stand.dae</filename>
+        <filename>moonwalk.dae</filename>
         <scale>1.0</scale>
       </skin>
-      <animation name="stand">
+      <animation name="standing">
         <filename>stand.dae</filename>
-        <scale>1.000000</scale>
-        <interpolate_x>true</interpolate_x>
       </animation>
-      <!--<plugin name="actor3_plugin" filename="libActorPlugin.so">
-        <target>3 2 1</target>
-        <target_weight>1.15</target_weight>
-        <obstacle_weight>1.8</obstacle_weight>
-        <animation_factor>5.1</animation_factor>>
-      </plugin>-->
-      <pose>0.5 1.5 1 0 0 0</pose>
+      <script>
+        <trajectory type="standing" id="3">
+          <waypoint>
+            <time>5</time>
+            <pose>-1 1.5 1 0 0 0</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <pose>-1 1.5 1 0 0 0</pose>
     </actor>
 
     <actor name="actor4">
@@ -502,36 +502,22 @@
 
   <!-- POI2 -->
     <actor name="actor11">
-      <pose>-13 -2 1 0 0 3.14</pose>
       <skin>
         <filename>stand.dae</filename>
         <scale>1.0</scale>
       </skin>
       <animation name="stand">
         <filename>stand.dae</filename>
-        <scale>1.000000</scale>
-        <interpolate_x>true</interpolate_x>
       </animation>
-      <plugin name="actor11_plugin" filename="libgazebo_yarp_PedestrianSFMPlugin.so">
-        <velocity>0.0</velocity>
-        <radius>0.4</radius>
-        <animation_factor>5.1</animation_factor>
-        <animation_name>stand</animation_name>
-        <people_distance>5.0</people_distance>
-        <goal_weight>2.0</goal_weight>
-        <obstacle_weight>80.0</obstacle_weight>
-        <social_weight>15.0</social_weight>
-        <group_gaze_weight>3.0</group_gaze_weight>
-        <group_coh_weight>2.0</group_coh_weight>
-        <group_rep_weight>1.0</group_rep_weight>
-        <group>
-            <model>actor11</model>
-        </group>
-        <trajectory>
-          <cyclic>true</cyclic>
-          <waypoint>-13 -2 1</waypoint>
+      <script>
+        <trajectory type="stand" id="11">
+          <waypoint>
+            <time>5</time>
+            <pose>-13 -2 1 0 0 3.14</pose>
+          </waypoint>
         </trajectory>
-      </plugin>
+      </script>
+      <pose>-13 -2 1 0 0 3.14</pose>
     </actor>
 
 
